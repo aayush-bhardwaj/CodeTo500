@@ -6,4 +6,4 @@ def Hanoi(disks, src, dest, aux):
         print("%s -> %s" %(src, dest))
         Hanoi(disks-1, aux, dest, src )
 
-Hanoi(3,1,3,2)
+Hanoi(64,1,3,2)
