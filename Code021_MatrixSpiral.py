@@ -20,24 +20,24 @@ def spiralMatrix(matrix, row, col):
 
     while(T<=B and L<=R):
         # import pdb;pdb.set_trace()
-        if(dir == 0 and (B>=T and R>=L)):
+        if(dir == 0):
             for x in range(L,R+1):
                 print matrix[T][x]
             T += 1
             dir = 1
-        if(dir == 1 and (B>=T and R>=L)):
+        elif(dir == 1):
             for x in range(T,B+1):
                 print matrix[x][R]
             R -= 1
             dir = 2
 
-        if(dir == 2 and (B>=T and R>=L)):
+        elif(dir == 2):
             for x in range(R,L-1,-1):
                 print matrix[B][x]
             B -= 1
             dir = 3
 
-        if(dir == 3 and (B>=T and R>=L)):
+        elif(dir == 3):
             for x in range(B,T-1,-1):
                 print matrix[x][L]
             L += 1
@@ -46,10 +46,10 @@ def spiralMatrix(matrix, row, col):
 # row = int(raw_input("How many rows do you want in the matrix? "))
 # col = int(raw_input("How many columns do you want in the matrix? "))
 # matrix = createMatrix(row,col)
-row = 4
-col = 4
+row = 3
+col = 1
 # matrix = [[1,2,3],[4,5,6],[7,8,9]]
-matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
-# matrix = [[1],[2],[3]]
+# matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+matrix = [[1],[2],[3]]
 spiralMatrix(matrix, row, col)
 # print(np.matrix(matrix))
