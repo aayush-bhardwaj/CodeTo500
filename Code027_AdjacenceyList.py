@@ -1,3 +1,7 @@
+'''
+TBA : Deletion of vertex and edge
+'''
+
 import sys
 
 class Vertex:
